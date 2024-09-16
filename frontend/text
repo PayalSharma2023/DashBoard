@@ -1,0 +1,8 @@
+tailwind:npx tailwindcss init
+
+axios:In React, backend communication is typically achieved using the HTTP protocol. While many developers are familiar with the XML HTTP request interface and Fetch API for making HTTP requests, there’s another powerful library called Axios that simplifies the process further.
+npm i axios
+
+react-hook-form
+
+react-router-dom
