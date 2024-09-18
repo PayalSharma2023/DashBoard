@@ -6,10 +6,11 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Routes>
+      <HomePage/>
+      {/* <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/addemployee" element={<CreateEmployeePage/>}/>
-      </Routes>
+      </Routes> */}
       
     </div>
   );
