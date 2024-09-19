@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  //  const [empData, setEmpData] = useState("");
+  const [empData, setEmpData] = useState("");
 
-  const empData = [
+  const people = [
     {
       name: "John Doe",
       title: "Front-end Developer",
@@ -25,29 +25,29 @@ const HomePage = () => {
     },
   ];
 
-  //  const getAllData = async () = {
-  //     try{
-  //         const getPeople = await fetch(
-  //             `${process.env.REACT_APP_BASE_URL}/getallUsers`,
-  //             {
-  //                 method: "GET",
-  //                 headers: {
-  //                     "Content-Type": "application/josn",
-  //                 },
-  //             }
-  //         );
+   const getAllData = async () => {
+      try{
+          const getPeople = await fetch(
+              `${process.env.REACT_APP_BASE_URL}/getallUsers`,
+              {
+                  method: "GET",
+                  headers: {
+                      "Content-Type": "application/josn",
+                  },
+              }
+          );
 
-  //         const res = await getPeople.json();
-  //         setEmpData(res);
+          const res = await getPeople.json();
+          setEmpData(res);
 
-  //     } catch (error){
-  //         console.log(error);
-  //     }
-  //  };
+      } catch (error){
+          console.log(error);
+      }
+   };
 
-  //  useEffect(()=>{
-  //     getAllData();
-  //  }, []);
+   useEffect(()=>{
+      getAllData();
+   }, []);
   console.log(empData);
 
   return (
